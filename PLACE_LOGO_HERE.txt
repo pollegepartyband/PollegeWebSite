@@ -1,0 +1,17 @@
+⚠️ LOGO FILE REQUIRED ⚠️
+
+Please place the Pollege logo file in this directory as:
+
+logo.png
+
+The file should be:
+- The transparent PNG version of the Pollege logo
+- Named exactly "logo.png" (lowercase)
+- Placed in the /public/ directory
+
+The website will reference it as: /logo.png
+
+This is required for the logo to display in:
+- Navigation bar
+- Hero section  
+- Footer
