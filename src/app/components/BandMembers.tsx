@@ -51,7 +51,7 @@ export function BandMembers() {
           <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wider">
             {t('band.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-600 mx-auto" />
+          <div className="w-24 h-1 bg-orange-600 mx-auto" />
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
@@ -78,7 +78,7 @@ export function BandMembers() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80 group-hover:opacity-60 transition-opacity duration-300" />
                   
                   {/* Icon */}
-                  <div className="absolute top-4 right-4 bg-cyan-600 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12">
+                  <div className="absolute top-4 right-4 bg-orange-600 p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:rotate-12">
                     <Icon className="w-6 h-6 text-white" />
                   </div>
                   
@@ -87,13 +87,13 @@ export function BandMembers() {
                     <h3 className="text-xl font-bold text-white mb-1">
                       {member.name}
                     </h3>
-                    <p className="text-cyan-400 font-semibold uppercase text-sm tracking-wide">
+                    <p className="text-orange-400 font-semibold uppercase text-sm tracking-wide">
                       {t(member.instrument)}
                     </p>
                   </div>
                   
                   {/* Hover effect border */}
-                  <div className="absolute inset-0 border-4 border-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 border-4 border-orange-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </motion.div>
             );

@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X, Music2, Languages } from 'lucide-react';
+import { Menu, X, Languages } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
-const logo = '/assets/48a27fa934bb1b60a719d135d27d9548b79973ae.png';
 
 const navLinks = [
   { name: 'nav.band', href: '#band' },
@@ -41,7 +40,7 @@ export function Navigation() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg shadow-cyan-600/10' : 'bg-transparent'
+        isScrolled ? 'bg-black/95 backdrop-blur-sm shadow-lg shadow-orange-600/10' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 py-4">
@@ -54,11 +53,11 @@ export function Navigation() {
             className="flex items-center gap-3 group"
           >
             <img 
-              src={logo} 
+              src="/logo.png" 
               alt="Pollege" 
-              className="h-10 w-auto"
+              className="h-12 w-auto"
               style={{
-                filter: 'drop-shadow(0 0 10px rgba(6, 182, 212, 0.5))',
+                filter: 'drop-shadow(0 0 10px rgba(249, 115, 22, 0.5))',
               }}
             />
           </motion.button>
@@ -72,24 +71,24 @@ export function Navigation() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 onClick={() => scrollToSection(link.href)}
-                className="text-gray-300 hover:text-cyan-600 font-semibold uppercase text-sm tracking-wider transition-colors relative group"
+                className="text-gray-300 hover:text-orange-500 font-semibold uppercase text-sm tracking-wider transition-colors relative group"
               >
                 {t(link.name)}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-cyan-600 group-hover:w-full transition-all duration-300" />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-600 group-hover:w-full transition-all duration-300" />
               </motion.button>
             ))}
             <Button
               onClick={toggleLanguage}
               variant="ghost"
               size="sm"
-              className="text-gray-300 hover:text-cyan-600"
+              className="text-gray-300 hover:text-orange-500"
             >
               <Languages className="w-4 h-4 mr-1" />
               {language.toUpperCase()}
             </Button>
             <Button
               onClick={() => scrollToSection('#contact')}
-              className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold uppercase"
+              className="bg-orange-600 hover:bg-orange-700 text-white font-bold uppercase"
             >
               {t('nav.bookNow')}
             </Button>
@@ -101,13 +100,13 @@ export function Navigation() {
               onClick={toggleLanguage}
               variant="ghost"
               size="sm"
-              className="text-gray-300 hover:text-cyan-600"
+              className="text-gray-300 hover:text-orange-500"
             >
               <Languages className="w-4 h-4" />
             </Button>
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-2 hover:text-cyan-600 transition-colors"
+              className="text-white p-2 hover:text-orange-500 transition-colors"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -128,14 +127,14 @@ export function Navigation() {
                   <button
                     key={link.name}
                     onClick={() => scrollToSection(link.href)}
-                    className="block w-full text-left text-gray-300 hover:text-cyan-600 font-semibold uppercase text-sm tracking-wider transition-colors py-2"
+                    className="block w-full text-left text-gray-300 hover:text-orange-500 font-semibold uppercase text-sm tracking-wider transition-colors py-2"
                   >
                     {t(link.name)}
                   </button>
                 ))}
                 <Button
                   onClick={() => scrollToSection('#contact')}
-                  className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-bold uppercase"
+                  className="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold uppercase"
                 >
                   {t('nav.bookNow')}
                 </Button>

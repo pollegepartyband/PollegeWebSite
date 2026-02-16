@@ -19,7 +19,6 @@ const translations = {
     'nav.bookNow': 'Prenota Ora',
 
     // Hero
-    'hero.tagline': 'Rock Party Hits dagli anni 90 ad oggi',
     'hero.cta': 'PRENOTACI ORA',
     'hero.scroll': 'Scorri per scoprire',
 
@@ -112,7 +111,6 @@ const translations = {
     'nav.bookNow': 'Book Now',
 
     // Hero
-    'hero.tagline': 'Rock Party Hits from 90s to Now',
     'hero.cta': 'BOOK US NOW',
     'hero.scroll': 'Scroll to discover',
 

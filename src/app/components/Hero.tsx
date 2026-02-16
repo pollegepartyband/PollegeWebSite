@@ -1,8 +1,6 @@
 import { motion } from 'motion/react';
-import { Music2 } from 'lucide-react';
 import { Button } from './ui/button';
 import { useLanguage } from '../contexts/LanguageContext';
-const logo = '/assets/48a27fa934bb1b60a719d135d27d9548b79973ae.png';
 
 export function Hero() {
   const { t } = useLanguage();
@@ -23,14 +21,14 @@ export function Hero() {
       />
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70" />
+      <div className="absolute inset-0 bg-black/75" />
       
       {/* Stage Lighting Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute w-96 h-96 rounded-full blur-3xl"
           style={{
-            background: 'radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(249, 115, 22, 0.3) 0%, transparent 70%)',
             top: '20%',
             left: '10%',
           }}
@@ -47,7 +45,7 @@ export function Hero() {
         <motion.div
           className="absolute w-96 h-96 rounded-full blur-3xl"
           style={{
-            background: 'radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%)',
+            background: 'radial-gradient(circle, rgba(251, 191, 36, 0.2) 0%, transparent 70%)',
             top: '30%',
             right: '10%',
           }}
@@ -67,29 +65,20 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex items-center justify-center mb-6"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1, ease: 'easeOut' }}
+          className="flex items-center justify-center mb-12"
         >
           <img 
-            src={logo} 
+            src="/logo.png" 
             alt="Pollege Logo" 
-            className="w-64 md:w-96 h-auto"
+            className="w-[500px] md:w-[700px] max-w-full h-auto"
             style={{
-              filter: 'drop-shadow(0 0 30px rgba(6, 182, 212, 0.5))',
+              filter: 'drop-shadow(0 0 40px rgba(249, 115, 22, 0.7)) drop-shadow(0 0 80px rgba(251, 191, 36, 0.4))',
             }}
           />
         </motion.div>
-
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-3xl text-cyan-400 font-bold mb-12 tracking-wide"
-        >
-          {t('hero.tagline')}
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -98,7 +87,7 @@ export function Hero() {
         >
           <Button
             onClick={scrollToContact}
-            className="bg-cyan-600 hover:bg-cyan-700 text-white px-12 py-7 text-xl font-bold rounded-none transform hover:scale-105 transition-all shadow-lg shadow-cyan-600/50"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-12 py-7 text-xl font-bold rounded-none transform hover:scale-105 transition-all shadow-lg shadow-orange-600/50"
           >
             {t('hero.cta')}
           </Button>
@@ -119,7 +108,7 @@ export function Hero() {
             className="mt-4"
           >
             <div className="w-6 h-10 border-2 border-gray-400 rounded-full mx-auto flex justify-center pt-2">
-              <div className="w-1 h-3 bg-cyan-600 rounded-full" />
+              <div className="w-1 h-3 bg-orange-600 rounded-full" />
             </div>
           </motion.div>
         </motion.div>

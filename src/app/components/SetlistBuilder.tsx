@@ -68,12 +68,12 @@ const DraggableSong = ({ song, index, isInSetlist, onRemove }: DraggableSongProp
   return (
     <div
       ref={drag}
-      className={`bg-zinc-900 p-4 rounded border border-zinc-800 hover:border-cyan-600 transition-all cursor-move group ${
+      className={`bg-zinc-900 p-4 rounded border border-zinc-800 hover:border-orange-600 transition-all cursor-move group ${
         isDragging ? 'opacity-50' : ''
       }`}
     >
       <div className="flex items-center gap-3">
-        <GripVertical className="w-4 h-4 text-gray-600 group-hover:text-cyan-600 transition-colors" />
+        <GripVertical className="w-4 h-4 text-gray-600 group-hover:text-orange-600 transition-colors" />
         <div className="flex-1 min-w-0">
           <p className="text-white font-semibold truncate">{song.title}</p>
           <p className="text-sm text-gray-400 truncate">{song.artist}</p>
@@ -83,13 +83,13 @@ const DraggableSong = ({ song, index, isInSetlist, onRemove }: DraggableSongProp
             variant="ghost"
             size="sm"
             onClick={() => onRemove?.(song.id)}
-            className="opacity-0 group-hover:opacity-100 transition-opacity hover:bg-cyan-600/20 hover:text-cyan-600"
+            className="opacity-0 group-hover:opacity-100 transition-opacity hover:bg-orange-600/20 hover:text-orange-600"
           >
             <Trash2 className="w-4 h-4" />
           </Button>
         )}
         {!isInSetlist && !song.isCustom && (
-          <span className="text-xs text-cyan-600 font-semibold px-2 py-1 bg-cyan-600/10 rounded">
+          <span className="text-xs text-orange-600 font-semibold px-2 py-1 bg-orange-600/10 rounded">
             {song.decade}
           </span>
         )}
@@ -126,7 +126,7 @@ const SetlistDropZone = ({ setlist, onDrop, onRemove }: SetlistDropZoneProps) =>
     <div
       ref={drop}
       className={`min-h-[400px] bg-black/50 rounded-lg border-2 border-dashed p-6 transition-all ${
-        isOver ? 'border-cyan-600 bg-cyan-600/10' : 'border-zinc-800'
+        isOver ? 'border-orange-600 bg-orange-600/10' : 'border-zinc-800'
       }`}
     >
       {setlist.length === 0 ? (
@@ -139,7 +139,7 @@ const SetlistDropZone = ({ setlist, onDrop, onRemove }: SetlistDropZoneProps) =>
         <div className="space-y-3">
           {setlist.map((song, index) => (
             <div key={`${song.id}-${index}`} className="flex items-center gap-3">
-              <span className="text-cyan-600 font-bold text-lg w-8">{index + 1}.</span>
+              <span className="text-orange-600 font-bold text-lg w-8">{index + 1}.</span>
               <div className="flex-1">
                 <DraggableSong song={song} index={index} isInSetlist onRemove={onRemove} />
               </div>
@@ -237,7 +237,7 @@ export function SetlistBuilder() {
             <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wider">
               {t('setlist.title')}
             </h2>
-            <div className="w-24 h-1 bg-cyan-600 mx-auto mb-6" />
+            <div className="w-24 h-1 bg-orange-600 mx-auto mb-6" />
             <p className="text-gray-400 max-w-2xl mx-auto">
               {t('setlist.description')}
             </p>
@@ -253,7 +253,7 @@ export function SetlistBuilder() {
             >
               <div className="bg-zinc-900 p-6 rounded-lg">
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
-                  <Music2 className="w-6 h-6 text-cyan-600" />
+                  <Music2 className="w-6 h-6 text-orange-600" />
                   {t('setlist.available')}
                 </h3>
                 
@@ -266,8 +266,8 @@ export function SetlistBuilder() {
                       variant={filter === decade ? 'default' : 'outline'}
                       className={
                         filter === decade
-                          ? 'bg-cyan-600 hover:bg-cyan-700'
-                          : 'border-zinc-800 hover:border-cyan-600'
+                          ? 'bg-orange-600 hover:bg-orange-700'
+                          : 'border-zinc-800 hover:border-orange-600'
                       }
                     >
                       {decade === 'all' ? t('setlist.all') : decade}
@@ -279,7 +279,7 @@ export function SetlistBuilder() {
                   <DialogTrigger asChild>
                     <Button 
                       variant="outline" 
-                      className="w-full mb-4 border-cyan-600 text-cyan-600 hover:bg-cyan-600/10"
+                      className="w-full mb-4 border-orange-600 text-orange-600 hover:bg-orange-600/10"
                     >
                       <Plus className="w-4 h-4 mr-2" />
                       {t('setlist.addCustom')}
@@ -298,7 +298,7 @@ export function SetlistBuilder() {
                           value={customTitle}
                           onChange={(e) => setCustomTitle(e.target.value)}
                           placeholder="Enter song title"
-                          className="bg-black border-zinc-800 focus:border-cyan-600 text-white"
+                          className="bg-black border-zinc-800 focus:border-orange-600 text-white"
                         />
                       </div>
                       <div>
@@ -309,14 +309,14 @@ export function SetlistBuilder() {
                           value={customArtist}
                           onChange={(e) => setCustomArtist(e.target.value)}
                           placeholder="Enter artist name"
-                          className="bg-black border-zinc-800 focus:border-cyan-600 text-white"
+                          className="bg-black border-zinc-800 focus:border-orange-600 text-white"
                         />
                       </div>
                       <div className="flex gap-2">
                         <Button
                           onClick={handleAddCustomSong}
                           disabled={!customTitle.trim() || !customArtist.trim()}
-                          className="flex-1 bg-cyan-600 hover:bg-cyan-700"
+                          className="flex-1 bg-orange-600 hover:bg-orange-700"
                         >
                           {t('setlist.add')}
                         </Button>
@@ -360,7 +360,7 @@ export function SetlistBuilder() {
                     <Button
                       variant="ghost"
                       onClick={handleClearSetlist}
-                      className="text-gray-400 hover:text-cyan-600"
+                      className="text-gray-400 hover:text-orange-600"
                     >
                       <X className="w-4 h-4 mr-2" />
                       {t('setlist.clear')}
@@ -377,7 +377,7 @@ export function SetlistBuilder() {
                 {setlist.length > 0 && (
                   <Button
                     onClick={handleSendSetlist}
-                    className="w-full mt-6 bg-cyan-600 hover:bg-cyan-700 text-white py-6 text-lg font-bold"
+                    className="w-full mt-6 bg-orange-600 hover:bg-orange-700 text-white py-6 text-lg font-bold"
                   >
                     <Mail className="w-5 h-5 mr-2" />
                     {t('setlist.send')}

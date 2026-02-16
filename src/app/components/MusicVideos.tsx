@@ -53,21 +53,21 @@ export function MusicVideos() {
           <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wider">
             {t('music.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-600 mx-auto" />
+          <div className="w-24 h-1 bg-orange-600 mx-auto" />
         </motion.div>
 
         <Tabs defaultValue="videos" className="w-full">
           <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-black/50">
             <TabsTrigger 
               value="videos" 
-              className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white"
+              className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
             >
               <Youtube className="w-5 h-5 mr-2" />
               {t('music.videos')}
             </TabsTrigger>
             <TabsTrigger 
               value="spotify"
-              className="data-[state=active]:bg-cyan-600 data-[state=active]:text-white"
+              className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
             >
               <Music className="w-5 h-5 mr-2" />
               {t('music.spotify')}
@@ -83,7 +83,7 @@ export function MusicVideos() {
             >
               <div className="bg-black/50 p-8 rounded-lg border border-zinc-800 mb-8">
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Youtube className="w-8 h-8 text-cyan-600" />
+                  <Youtube className="w-8 h-8 text-orange-600" />
                   {t('music.videoLinks')}
                 </h3>
                 <p className="text-gray-400 mb-6">
@@ -102,7 +102,7 @@ export function MusicVideos() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="group relative overflow-hidden rounded-lg bg-black border border-zinc-800 hover:border-cyan-600 transition-all"
+                    className="group relative overflow-hidden rounded-lg bg-black border border-zinc-800 hover:border-orange-600 transition-all"
                   >
                     <div className="relative aspect-video overflow-hidden">
                       <img
@@ -114,7 +114,7 @@ export function MusicVideos() {
                       
                       {/* Play Button */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="bg-cyan-600 rounded-full p-4 group-hover:scale-110 transition-transform">
+                        <div className="bg-orange-600 rounded-full p-4 group-hover:scale-110 transition-transform">
                           <Youtube className="w-8 h-8 text-white" />
                         </div>
                       </div>
@@ -126,7 +126,7 @@ export function MusicVideos() {
                     </div>
 
                     <div className="p-4">
-                      <p className="text-white font-semibold group-hover:text-cyan-400 transition-colors">
+                      <p className="text-white font-semibold group-hover:text-orange-400 transition-colors">
                         {video.title}
                       </p>
                     </div>
@@ -146,13 +146,13 @@ export function MusicVideos() {
             >
               <div className="bg-black/50 p-8 rounded-lg border border-zinc-800">
                 <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                  <Music className="w-8 h-8 text-cyan-600" />
+                  <Music className="w-8 h-8 text-orange-600" />
                   {t('music.playlistTitle')}
                 </h3>
                 <p className="text-gray-400 mb-6">
                   {t('music.playlistDescription')}
                 </p>
-                <div className="aspect-[2/1] bg-black rounded-lg overflow-hidden shadow-2xl shadow-cyan-600/20">
+                <div className="aspect-[2/1] bg-black rounded-lg overflow-hidden shadow-2xl shadow-orange-600/20">
                   <iframe
                     style={{ borderRadius: '12px' }}
                     src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1spT6G94GFC?utm_source=generator"

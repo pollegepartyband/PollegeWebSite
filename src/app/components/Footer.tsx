@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
-import { Music2, Facebook, Instagram, Youtube } from 'lucide-react';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-const logo = '/assets/48a27fa934bb1b60a719d135d27d9548b79973ae.png';
 
 export function Footer() {
   const { t } = useLanguage();
@@ -19,11 +18,11 @@ export function Footer() {
           >
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src={logo} 
+                src="/logo.png" 
                 alt="Pollege" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
                 style={{
-                  filter: 'drop-shadow(0 0 10px rgba(6, 182, 212, 0.5))',
+                  filter: 'drop-shadow(0 0 10px rgba(249, 115, 22, 0.5))',
                 }}
               />
             </div>
@@ -50,7 +49,7 @@ export function Footer() {
                       const element = document.querySelector(`#${link.toLowerCase()}`);
                       element?.scrollIntoView({ behavior: 'smooth' });
                     }}
-                    className="text-gray-400 hover:text-cyan-600 transition-colors"
+                    className="text-gray-400 hover:text-orange-500 transition-colors"
                   >
                     {t(`nav.${link.toLowerCase()}`)}
                   </button>
@@ -74,7 +73,7 @@ export function Footer() {
                 href="https://facebook.com/pollege"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-zinc-900 p-3 rounded-lg hover:bg-cyan-600 transition-colors group"
+                className="bg-zinc-900 p-3 rounded-lg hover:bg-orange-600 transition-colors group"
               >
                 <Facebook className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
@@ -82,7 +81,7 @@ export function Footer() {
                 href="https://instagram.com/pollege"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-zinc-900 p-3 rounded-lg hover:bg-cyan-600 transition-colors group"
+                className="bg-zinc-900 p-3 rounded-lg hover:bg-orange-600 transition-colors group"
               >
                 <Instagram className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
@@ -90,13 +89,13 @@ export function Footer() {
                 href="https://youtube.com/@pollege"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-zinc-900 p-3 rounded-lg hover:bg-cyan-600 transition-colors group"
+                className="bg-zinc-900 p-3 rounded-lg hover:bg-orange-600 transition-colors group"
               >
                 <Youtube className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
               </a>
             </div>
             <p className="text-gray-400 mt-4 text-sm">
-              {t('contact.booking')}: <a href="mailto:booking@pollege.com" className="text-cyan-600 hover:underline">booking@pollege.com</a>
+              {t('contact.booking')}: <a href="mailto:booking@pollege.com" className="text-orange-600 hover:underline">booking@pollege.com</a>
             </p>
           </motion.div>
         </div>

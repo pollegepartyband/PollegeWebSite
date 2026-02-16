@@ -93,7 +93,7 @@ const NextArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-cyan-600 hover:bg-cyan-700 p-3 rounded-full transition-all"
+      className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-orange-600 hover:bg-orange-700 p-3 rounded-full transition-all"
     >
       <ChevronRight className="w-6 h-6 text-white" />
     </button>
@@ -105,7 +105,7 @@ const PrevArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-cyan-600 hover:bg-cyan-700 p-3 rounded-full transition-all"
+      className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-orange-600 hover:bg-orange-700 p-3 rounded-full transition-all"
     >
       <ChevronLeft className="w-6 h-6 text-white" />
     </button>
@@ -154,7 +154,7 @@ export function GigsEvents() {
           <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wider">
             {t('gigs.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-600 mx-auto" />
+          <div className="w-24 h-1 bg-orange-600 mx-auto" />
         </motion.div>
 
         {/* Upcoming Gigs */}
@@ -166,7 +166,7 @@ export function GigsEvents() {
           className="mb-16"
         >
           <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-            <Calendar className="w-8 h-8 text-cyan-600" />
+            <Calendar className="w-8 h-8 text-orange-600" />
             {t('gigs.upcoming')}
           </h3>
           <div className="space-y-4">
@@ -175,11 +175,11 @@ export function GigsEvents() {
               return (
                 <div
                   key={gig.id}
-                  className="bg-black/50 border border-zinc-800 rounded-lg p-6 hover:border-cyan-600 transition-all group"
+                  className="bg-black/50 border border-zinc-800 rounded-lg p-6 hover:border-orange-600 transition-all group"
                 >
                   <div className="flex flex-col md:flex-row md:items-center gap-6">
                     {/* Date Box */}
-                    <div className="bg-cyan-600 text-white p-4 rounded-lg text-center min-w-[100px]">
+                    <div className="bg-orange-600 text-white p-4 rounded-lg text-center min-w-[100px]">
                       <div className="text-3xl font-black">{day}</div>
                       <div className="text-sm font-bold">{month}</div>
                       <div className="text-xs opacity-80">{year}</div>
@@ -187,7 +187,7 @@ export function GigsEvents() {
 
                     {/* Gig Info */}
                     <div className="flex-1">
-                      <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-cyan-600 transition-colors">
+                      <h4 className="text-2xl font-bold text-white mb-2 group-hover:text-orange-600 transition-colors">
                         {gig.venue}
                       </h4>
                       <div className="flex flex-wrap gap-4 text-gray-400">
@@ -209,7 +209,7 @@ export function GigsEvents() {
                           {t('gigs.soldout')}
                         </div>
                       ) : (
-                        <Button className="bg-cyan-600 hover:bg-cyan-700 px-8 py-6">
+                        <Button className="bg-orange-600 hover:bg-orange-700 px-8 py-6">
                           {t('gigs.tickets')}
                         </Button>
                       )}
@@ -229,7 +229,7 @@ export function GigsEvents() {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           <h3 className="text-3xl font-bold text-white mb-8 flex items-center gap-3">
-            <Calendar className="w-8 h-8 text-cyan-600" />
+            <Calendar className="w-8 h-8 text-orange-600" />
             {t('gigs.past')}
           </h3>
           <div className="past-gigs-slider">
@@ -245,14 +245,14 @@ export function GigsEvents() {
                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                      <div className="absolute top-4 left-4 bg-cyan-600 text-white px-4 py-2 rounded font-bold">
+                      <div className="absolute top-4 left-4 bg-orange-600 text-white px-4 py-2 rounded font-bold">
                         {day} {month}
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h4 className="text-xl font-bold text-white mb-1">
                           {gig.venue}
                         </h4>
-                        <p className="text-cyan-400 font-semibold">{gig.city}</p>
+                        <p className="text-orange-400 font-semibold">{gig.city}</p>
                       </div>
                     </div>
                   </div>
@@ -268,11 +268,11 @@ export function GigsEvents() {
           bottom: -40px;
         }
         .past-gigs-slider .slick-dots li button:before {
-          color: #06b6d4;
+          color: #f97316;
           font-size: 12px;
         }
         .past-gigs-slider .slick-dots li.slick-active button:before {
-          color: #06b6d4;
+          color: #f97316;
         }
       `}</style>
     </section>

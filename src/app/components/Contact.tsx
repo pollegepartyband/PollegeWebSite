@@ -57,7 +57,7 @@ ${formData.message}
           <h2 className="text-5xl md:text-6xl font-black text-white mb-4 tracking-wider">
             {t('contact.title')}
           </h2>
-          <div className="w-24 h-1 bg-cyan-600 mx-auto mb-6" />
+          <div className="w-24 h-1 bg-orange-600 mx-auto mb-6" />
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             {t('contact.subtitle')}
           </p>
@@ -73,7 +73,7 @@ ${formData.message}
             className="bg-zinc-900 p-8 rounded-lg border border-zinc-800"
           >
             <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-              <Send className="w-6 h-6 text-cyan-600" />
+              <Send className="w-6 h-6 text-orange-600" />
               {t('contact.formTitle')}
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -88,7 +88,7 @@ ${formData.message}
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="bg-black border-zinc-800 focus:border-cyan-600 text-white"
+                  className="bg-black border-zinc-800 focus:border-orange-600 text-white"
                   placeholder={t('contact.placeholder.name')}
                 />
               </div>
@@ -104,7 +104,7 @@ ${formData.message}
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="bg-black border-zinc-800 focus:border-cyan-600 text-white"
+                  className="bg-black border-zinc-800 focus:border-orange-600 text-white"
                   placeholder={t('contact.placeholder.email')}
                 />
               </div>
@@ -119,7 +119,7 @@ ${formData.message}
                   type="tel"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="bg-black border-zinc-800 focus:border-cyan-600 text-white"
+                  className="bg-black border-zinc-800 focus:border-orange-600 text-white"
                   placeholder={t('contact.placeholder.phone')}
                 />
               </div>
@@ -134,7 +134,7 @@ ${formData.message}
                   type="date"
                   value={formData.eventDate}
                   onChange={handleChange}
-                  className="bg-black border-zinc-800 focus:border-cyan-600 text-white"
+                  className="bg-black border-zinc-800 focus:border-orange-600 text-white"
                 />
               </div>
 
@@ -149,14 +149,14 @@ ${formData.message}
                   value={formData.message}
                   onChange={handleChange}
                   rows={5}
-                  className="bg-black border-zinc-800 focus:border-cyan-600 text-white resize-none"
+                  className="bg-black border-zinc-800 focus:border-orange-600 text-white resize-none"
                   placeholder={t('contact.placeholder.message')}
                 />
               </div>
 
               <Button
                 type="submit"
-                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-6 text-lg font-bold"
+                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-6 text-lg font-bold"
               >
                 <Mail className="w-5 h-5 mr-2" />
                 {t('contact.send')}
@@ -177,14 +177,14 @@ ${formData.message}
               <h3 className="text-2xl font-bold text-white mb-6">{t('contact.getInTouch')}</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
-                  <div className="bg-cyan-600 p-3 rounded-lg">
+                  <div className="bg-orange-600 p-3 rounded-lg">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm mb-1">{t('contact.emailLabel')}</p>
                     <a
                       href="mailto:booking@pollege.com"
-                      className="text-white font-semibold hover:text-cyan-600 transition-colors"
+                      className="text-white font-semibold hover:text-orange-600 transition-colors"
                     >
                       booking@pollege.com
                     </a>
@@ -192,14 +192,14 @@ ${formData.message}
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-cyan-600 p-3 rounded-lg">
+                  <div className="bg-orange-600 p-3 rounded-lg">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm mb-1">{t('contact.phoneLabel')}</p>
                     <a
                       href="tel:+39123456789"
-                      className="text-white font-semibold hover:text-cyan-600 transition-colors"
+                      className="text-white font-semibold hover:text-orange-600 transition-colors"
                     >
                       +39 123 456 789
                     </a>
@@ -207,7 +207,7 @@ ${formData.message}
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="bg-cyan-600 p-3 rounded-lg">
+                  <div className="bg-orange-600 p-3 rounded-lg">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -226,9 +226,9 @@ ${formData.message}
                   href="https://facebook.com/pollege"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-cyan-600/10 hover:border-cyan-600 border border-transparent transition-all group"
+                  className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-orange-600/10 hover:border-orange-600 border border-transparent transition-all group"
                 >
-                  <Facebook className="w-8 h-8 text-cyan-600 group-hover:scale-110 transition-transform" />
+                  <Facebook className="w-8 h-8 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-white font-semibold">Facebook</p>
                     <p className="text-gray-400 text-sm">@pollege</p>
@@ -239,9 +239,9 @@ ${formData.message}
                   href="https://instagram.com/pollege"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-cyan-600/10 hover:border-cyan-600 border border-transparent transition-all group"
+                  className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-orange-600/10 hover:border-orange-600 border border-transparent transition-all group"
                 >
-                  <Instagram className="w-8 h-8 text-cyan-600 group-hover:scale-110 transition-transform" />
+                  <Instagram className="w-8 h-8 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-white font-semibold">Instagram</p>
                     <p className="text-gray-400 text-sm">@pollege</p>
@@ -252,9 +252,9 @@ ${formData.message}
                   href="https://youtube.com/@pollege"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-cyan-600/10 hover:border-cyan-600 border border-transparent transition-all group"
+                  className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-orange-600/10 hover:border-orange-600 border border-transparent transition-all group"
                 >
-                  <Youtube className="w-8 h-8 text-cyan-600 group-hover:scale-110 transition-transform" />
+                  <Youtube className="w-8 h-8 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-white font-semibold">YouTube</p>
                     <p className="text-gray-400 text-sm">@pollege</p>
@@ -264,9 +264,9 @@ ${formData.message}
             </div>
 
             {/* Booking CTA */}
-            <div className="bg-gradient-to-br from-cyan-600 to-cyan-800 p-8 rounded-lg text-white">
+            <div className="bg-gradient-to-br from-orange-600 to-orange-800 p-8 rounded-lg text-white">
               <h3 className="text-2xl font-bold mb-3">{t('contact.ready')}</h3>
-              <p className="text-cyan-100 mb-6">
+              <p className="text-orange-100 mb-6">
                 {t('contact.readyDescription')}
               </p>
               <Button
@@ -274,7 +274,7 @@ ${formData.message}
                   const contactForm = document.querySelector('#contact form');
                   contactForm?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="bg-white text-cyan-600 hover:bg-gray-100 font-bold"
+                className="bg-white text-orange-600 hover:bg-gray-100 font-bold"
               >
                 {t('contact.quote')}
               </Button>

@@ -1,0 +1,23 @@
+⚠️ IMPORTANT: LOGO SETUP REQUIRED ⚠️
+
+The website references a logo file at: /public/logo.png
+
+STEPS TO ADD THE LOGO:
+
+1. Download or save the Pollege logo (the transparent PNG with the chicken character and colorful text)
+
+2. Place it in this exact location:
+   /public/logo.png
+
+3. Make sure the file is named exactly "logo.png" (lowercase)
+
+4. The logo should be the transparent version (PNG format)
+
+Without this file, the logo will not display correctly on the website.
+
+The logo is used in:
+- Navigation bar
+- Hero section (main banner)
+- Footer
+
+Once added, the logo will have an orange glow effect that matches the website's color scheme.
