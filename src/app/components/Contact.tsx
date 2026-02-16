@@ -32,7 +32,7 @@ Message:
 ${formData.message}
     `.trim();
     
-    window.location.href = `mailto:booking@pollege.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = `mailto:pollegepartyband@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     
     toast.success(t('contact.opening'));
   };
@@ -183,38 +183,15 @@ ${formData.message}
                   <div>
                     <p className="text-gray-400 text-sm mb-1">{t('contact.emailLabel')}</p>
                     <a
-                      href="mailto:booking@pollege.com"
+                      href="mailto:pollegepartyband@gmail.com"
                       className="text-white font-semibold hover:text-orange-600 transition-colors"
                     >
-                      booking@pollege.com
+                      pollegepartyband@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-600 p-3 rounded-lg">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">{t('contact.phoneLabel')}</p>
-                    <a
-                      href="tel:+39123456789"
-                      className="text-white font-semibold hover:text-orange-600 transition-colors"
-                    >
-                      +39 123 456 789
-                    </a>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="bg-orange-600 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm mb-1">{t('contact.based')}</p>
-                    <p className="text-white font-semibold">{t('contact.location')}</p>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -223,7 +200,7 @@ ${formData.message}
               <h3 className="text-2xl font-bold text-white mb-6">{t('contact.follow')}</h3>
               <div className="space-y-4">
                 <a
-                  href="https://facebook.com/pollege"
+                  href="https://www.facebook.com/pollegeband"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-orange-600/10 hover:border-orange-600 border border-transparent transition-all group"
@@ -231,12 +208,12 @@ ${formData.message}
                   <Facebook className="w-8 h-8 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-white font-semibold">Facebook</p>
-                    <p className="text-gray-400 text-sm">@pollege</p>
+                    
                   </div>
                 </a>
 
                 <a
-                  href="https://instagram.com/pollege"
+                  href="https://instagram.com/pollege_rock_band"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-orange-600/10 hover:border-orange-600 border border-transparent transition-all group"
@@ -244,12 +221,12 @@ ${formData.message}
                   <Instagram className="w-8 h-8 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-white font-semibold">Instagram</p>
-                    <p className="text-gray-400 text-sm">@pollege</p>
+                    
                   </div>
                 </a>
 
                 <a
-                  href="https://youtube.com/@pollege"
+                  href="https://youtube.com/@Pollege-d4k"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-black/50 rounded-lg hover:bg-orange-600/10 hover:border-orange-600 border border-transparent transition-all group"
@@ -257,7 +234,7 @@ ${formData.message}
                   <Youtube className="w-8 h-8 text-orange-600 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="text-white font-semibold">YouTube</p>
-                    <p className="text-gray-400 text-sm">@pollege</p>
+                    
                   </div>
                 </a>
               </div>

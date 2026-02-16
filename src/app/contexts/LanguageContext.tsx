@@ -25,10 +25,10 @@ const translations = {
     // Band
     'band.title': 'LA BAND',
     'band.vocals': 'Voce',
-    'band.leadGuitar': 'Chitarra Solista',
+    'band.leadGuitar': 'Chitarra',
     'band.drums': 'Batteria',
     'band.bass': 'Basso',
-    'band.keyboards': 'Tastiere',
+    'band.keyboards': 'Tastiere & Synth',
 
     // Music
     'music.title': 'MUSICA & VIDEO',
@@ -117,10 +117,10 @@ const translations = {
     // Band
     'band.title': 'THE BAND',
     'band.vocals': 'Vocals',
-    'band.leadGuitar': 'Lead Guitar',
+    'band.leadGuitar': 'Guitar',
     'band.drums': 'Drums',
     'band.bass': 'Bass',
-    'band.keyboards': 'Keyboards',
+    'band.keyboards': 'Keyboards & Synth',
 
     // Music
     'music.title': 'MUSIC & VIDEOS',
@@ -175,7 +175,7 @@ const translations = {
     'contact.emailLabel': 'Email',
     'contact.phoneLabel': 'Phone',
     'contact.based': 'Based in',
-    'contact.location': 'Milan, Italy',
+    'contact.location': 'Bologna, Italy',
     'contact.follow': 'Follow Us',
     'contact.booking': 'Booking',
     'contact.ready': 'Ready to Rock?',
