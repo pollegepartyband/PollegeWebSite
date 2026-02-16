@@ -18,7 +18,7 @@ export function Footer() {
           >
             <div className="flex items-center gap-3 mb-4">
               <img 
-                src="/logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`}
                 alt="Pollege" 
                 className="h-16 w-auto"
                 style={{
