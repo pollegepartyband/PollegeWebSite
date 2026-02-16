@@ -71,7 +71,7 @@ export function Hero() {
           className="flex items-center justify-center mb-12"
         >
           <img 
-            src="/logo.png" 
+            src={`${import.meta.env.BASE_URL}logo.png`}
             alt="Pollege Logo" 
             className="w-[500px] md:w-[700px] max-w-full h-auto"
             style={{
