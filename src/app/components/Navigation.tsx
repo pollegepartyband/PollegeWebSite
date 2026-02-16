@@ -53,7 +53,7 @@ export function Navigation() {
             className="flex items-center gap-3 group"
           >
             <img 
-              src="/logo.png" 
+              src={`${import.meta.env.BASE_URL}logo.png`}
               alt="Pollege" 
               className="h-12 w-auto"
               style={{
