@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Music2, Facebook, Instagram, Youtube } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import logo from 'figma:asset/48a27fa934bb1b60a719d135d27d9548b79973ae.png';
+const logo = '/assets/48a27fa934bb1b60a719d135d27d9548b79973ae.png';
 
 export function Footer() {
   const { t } = useLanguage();
