@@ -10,35 +10,40 @@ import { toast } from 'sonner';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const availableSongs = [
-  // 90s
-  { id: 1, title: 'Smells Like Teen Spirit', artist: 'Nirvana', decade: '90s' },
-  { id: 2, title: 'Black Hole Sun', artist: 'Soundgarden', decade: '90s' },
-  { id: 3, title: 'Basket Case', artist: 'Green Day', decade: '90s' },
-  { id: 4, title: 'Wonderwall', artist: 'Oasis', decade: '90s' },
-  { id: 5, title: 'Zombie', artist: 'The Cranberries', decade: '90s' },
-  { id: 6, title: 'Everlong', artist: 'Foo Fighters', decade: '90s' },
-  { id: 7, title: 'Under the Bridge', artist: 'Red Hot Chili Peppers', decade: '90s' },
-  { id: 8, title: 'Song 2', artist: 'Blur', decade: '90s' },
-  
-  // 2000s
-  { id: 9, title: 'Mr. Brightside', artist: 'The Killers', decade: '2000s' },
-  { id: 10, title: 'Seven Nation Army', artist: 'The White Stripes', decade: '2000s' },
-  { id: 11, title: 'Boulevard of Broken Dreams', artist: 'Green Day', decade: '2000s' },
-  { id: 12, title: 'Supermassive Black Hole', artist: 'Muse', decade: '2000s' },
-  { id: 13, title: 'Last Resort', artist: 'Papa Roach', decade: '2000s' },
-  { id: 14, title: 'In the End', artist: 'Linkin Park', decade: '2000s' },
-  { id: 15, title: 'Chop Suey!', artist: 'System of a Down', decade: '2000s' },
-  { id: 16, title: 'Sex on Fire', artist: 'Kings of Leon', decade: '2000s' },
-  
-  // 2010s+
-  { id: 17, title: 'Do I Wanna Know?', artist: 'Arctic Monkeys', decade: '2010s+' },
-  { id: 18, title: 'Radioactive', artist: 'Imagine Dragons', decade: '2010s+' },
-  { id: 19, title: 'Somebody Told Me', artist: 'The Killers', decade: '2010s+' },
-  { id: 20, title: 'Little Lion Man', artist: 'Mumford & Sons', decade: '2010s+' },
-  { id: 21, title: 'Pompeii', artist: 'Bastille', decade: '2010s+' },
-  { id: 22, title: 'Take Me Out', artist: 'Franz Ferdinand', decade: '2010s+' },
-  { id: 23, title: 'The Pretender', artist: 'Foo Fighters', decade: '2010s+' },
-  { id: 24, title: 'Are You Gonna Be My Girl', artist: 'Jet', decade: '2010s+' },
+
+  { id: 1, title: 'Somebody Told Me', artist: 'The Killers', decade: '2000s' },
+  { id: 2, title: 'Feel Good Inc.', artist: 'Gorillaz, De La Soul', decade: '2000s' },
+  { id: 3, title: 'Narcotic', artist: 'Liquido', decade: '90s' },
+  { id: 4, title: 'Bohemian Like You', artist: 'The Dandy Warhols', decade: '2000s' },
+  { id: 5, title: 'Alright', artist: 'Supergrass', decade: '90s' },
+  { id: 6, title: 'Chelsea Dagger', artist: 'The Fratellis', decade: '2000s' },
+  { id: 7, title: 'Lonely Boy', artist: 'The Black Keys', decade: '2010s+' },
+  { id: 8, title: 'I Bet You Look Good On The Dancefloor', artist: 'Arctic Monkeys', decade: '2000s' },
+  { id: 9, title: 'Take Me Out', artist: 'Franz Ferdinand', decade: '2000s' },
+  { id: 10, title: 'Reptilia', artist: 'The Strokes', decade: '2000s' },
+  { id: 11, title: 'Gli Spari Sopra (Celebrate)', artist: 'Vasco Rossi', decade: '90s' },
+  { id: 12, title: 'Under the Bridge', artist: 'Red Hot Chili Peppers', decade: '90s' },
+  { id: 13, title: 'Discolabirinto', artist: 'Subsonica', decade: '90s' },
+  { id: 14, title: "What's My Age Again?", artist: 'blink-182', decade: '90s' },
+  { id: 15, title: 'Basket Case', artist: 'Green Day', decade: '90s' },
+  { id: 16, title: 'Higher Ground', artist: 'Red Hot Chili Peppers', decade: '80s' },
+  { id: 17, title: 'All The Small Things', artist: 'blink-182', decade: '90s' },
+  { id: 18, title: 'I\'ll Be There for You', artist: 'The Rembrandts', decade: '90s' },
+  { id: 19, title: 'Song 2', artist: 'Blur', decade: '90s' },
+  { id: 20, title: 'Aeroplane', artist: 'Red Hot Chili Peppers', decade: '90s' },
+  { id: 21, title: 'Holiday', artist: 'Green Day', decade: '2000s' },
+  { id: 22, title: 'Mr. Brightside', artist: 'The Killers', decade: '2000s' },
+  { id: 23, title: 'X Colpa Di Chi?', artist: 'Zucchero', decade: '90s' },
+  { id: 24, title: 'Killing In the Name', artist: 'Rage Against The Machine', decade: '90s' },
+  { id: 25, title: 'Kids', artist: 'MGMT', decade: '2010s+' },
+  { id: 26, title: 'Walkin on the sun', artist: 'Smash Mouth', decade: '90s' },
+  { id: 27, title: 'By The Way', artist: 'Red Hot Chili Peppers', decade: '2000s' },
+  { id: 28, title: 'Shipping Up To Boston', artist: 'Dropkick Murphys', decade: '2000s' },
+  { id: 29, title: 'Jerk It Out', artist: 'The Caesars', decade: '2000s' },
+  { id: 30, title: 'Club Foot', artist: 'Kasabian', decade: '2000s' },
+  { id: 31, title: 'Buddy Holly', artist: 'Weezer', decade: '90s' },
+
+
 ];
 
 interface Song {

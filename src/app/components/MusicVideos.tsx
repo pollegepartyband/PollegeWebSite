@@ -155,7 +155,7 @@ export function MusicVideos() {
                 <div className="aspect-[2/1] bg-black rounded-lg overflow-hidden shadow-2xl shadow-orange-600/20">
                   <iframe
                     style={{ borderRadius: '12px' }}
-                    src="https://open.spotify.com/embed/playlist/37i9dQZF1DX1spT6G94GFC?utm_source=generator"
+                    src="https://open.spotify.com/embed/playlist/7ARam3sPlrffoSuJ2w8cwr?si=4c1d666ab0be4eaa"
                     width="100%"
                     height="100%"
                     frameBorder="0"

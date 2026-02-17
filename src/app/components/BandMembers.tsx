@@ -6,19 +6,19 @@ const members = [
   {
     name: 'Andrea Calabrese',
     instrument: 'band.vocals',
-    image: 'https://images.unsplash.com/photo-1759415535838-33b2835316d2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwcm9jayUyMHNpbmdlciUyMG1pY3JvcGhvbmV8ZW58MXx8fHwxNzcxMDc2NjgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: `${import.meta.env.BASE_URL}Andre.jpg`,
     icon: Mic,
   },
   {
     name: 'Giuseppe Divella',
     instrument: 'band.leadGuitar',
-    image: 'https://images.unsplash.com/photo-1762160768542-35019618bf98?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZ3VpdGFyaXN0JTIwcm9jayUyMG11c2ljaWFufGVufDF8fHx8MTc3MTA3NjY4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: `${import.meta.env.BASE_URL}GIUSEPPE.jpeg`,
     icon: Guitar,
   },
   {
     name: 'Davide Gamberini',
     instrument: 'band.drums',
-    image: 'https://images.unsplash.com/photo-1762870357538-fa78adcdbc12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcnVtbWVyJTIwcGxheWluZyUyMGRydW1zJTIwbGl2ZXxlbnwxfHx8fDE3NzEwNzY2ODN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: `${import.meta.env.BASE_URL}dave.png`,
     icon: Drum,
   },
   {
