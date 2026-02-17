@@ -57,19 +57,19 @@ export function MusicVideos() {
         </motion.div>
 
         <Tabs defaultValue="videos" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-black/50">
-            <TabsTrigger 
-              value="videos" 
-              className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
+          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-12 bg-black">
+            <TabsTrigger
+              value="videos"
+              className="text-white bg-black data-[state=active]:bg-orange-600"
             >
-              <Youtube className="w-5 h-5 mr-2" />
+              <Youtube className="w-5 h-5 mr-2 text-white" />
               {t('music.videos')}
             </TabsTrigger>
-            <TabsTrigger 
+            <TabsTrigger
               value="spotify"
-              className="data-[state=active]:bg-orange-600 data-[state=active]:text-white"
+              className="text-white bg-black data-[state=active]:bg-orange-600"
             >
-              <Music className="w-5 h-5 mr-2" />
+              <Music className="w-5 h-5 mr-2 text-white" />
               {t('music.spotify')}
             </TabsTrigger>
           </TabsList>

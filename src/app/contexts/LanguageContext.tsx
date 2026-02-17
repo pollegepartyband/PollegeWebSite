@@ -67,6 +67,7 @@ const translations = {
     'gigs.past': 'Concerti Passati',
     'gigs.soldout': 'SOLD OUT',
     'gigs.tickets': 'Biglietti',
+    'gigs.prenota': 'Prenota',
 
     // Contact
     'contact.title': 'CONTATTI & BOOKING',
@@ -159,6 +160,7 @@ const translations = {
     'gigs.past': 'Past Shows',
     'gigs.soldout': 'SOLD OUT',
     'gigs.tickets': 'Get Tickets',
+    'gigs.prenota': 'Book Now',
 
     // Contact
     'contact.title': 'CONTACT & BOOKING',

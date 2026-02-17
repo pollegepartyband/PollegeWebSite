@@ -9,73 +9,36 @@ import 'slick-carousel/slick/slick-theme.css';
 const upcomingGigs = [
   {
     id: 1,
-    date: '2026-03-15',
-    venue: 'The Rock Arena',
-    city: 'Milan',
+    date: '2026-05-8',
+    venue: 'CRAL - Circolo Arci',
+    city: 'Bazzano (BO)',
     time: '21:00',
     status: 'tickets',
-  },
-  {
-    id: 2,
-    date: '2026-03-28',
-    venue: 'Underground Club',
-    city: 'Rome',
-    time: '22:00',
-    status: 'tickets',
-  },
-  {
-    id: 3,
-    date: '2026-04-10',
-    venue: 'Music Hall',
-    city: 'Turin',
-    time: '20:30',
-    status: 'soldout',
-  },
-  {
-    id: 4,
-    date: '2026-04-22',
-    venue: 'Live Music Venue',
-    city: 'Florence',
-    time: '21:30',
-    status: 'tickets',
-  },
+  }
 ];
 
 const pastGigs = [
   {
-    id: 1,
-    date: '2026-02-10',
-    venue: 'Rock Festival',
-    city: 'Bologna',
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?w=800&auto=format&fit=crop',
+    // optional hover image shown in the preview overlay; set to falsy to disable hover
+    hoverImage: '',
+    date: '2025-10-19',
+    venue: 'CRAL - Circolo Arci',
+    city: 'Bazzano (BO)',
+    image: `${import.meta.env.BASE_URL}cral_bazzano.jpg`,
   },
   {
-    id: 2,
-    date: '2026-01-25',
-    venue: 'City Arena',
-    city: 'Verona',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=800&auto=format&fit=crop',
+    hoverImage: '',
+    date: '2025-12-14',
+    venue: 'CRAL - Circolo Arci',
+    city: 'Bazzano (BO)',
+    image: `${import.meta.env.BASE_URL}cral_bazzano.jpg`,
   },
   {
-    id: 3,
-    date: '2026-01-12',
-    venue: 'The Stage',
-    city: 'Genoa',
-    image: 'https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&auto=format&fit=crop',
-  },
-  {
-    id: 4,
-    date: '2025-12-30',
-    venue: "New Year's Eve Party",
-    city: 'Naples',
-    image: 'https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=800&auto=format&fit=crop',
-  },
-  {
-    id: 5,
-    date: '2025-12-15',
-    venue: 'Winter Rock Fest',
-    city: 'Venice',
-    image: 'https://images.unsplash.com/photo-1506157786151-b8491531f063?w=800&auto=format&fit=crop',
+    hoverImage: `${import.meta.env.BASE_URL}loc_30012026.jpeg`,
+    date: '2026-01-30',
+    venue: 'CRAL - Circolo Arci',
+    city: 'Bazzano (BO)',
+    image: `${import.meta.env.BASE_URL}cral_bazzano.jpg`,
   },
 ];
 
@@ -210,7 +173,7 @@ export function GigsEvents() {
                         </div>
                       ) : (
                         <Button className="bg-orange-600 hover:bg-orange-700 px-8 py-6">
-                          {t('gigs.tickets')}
+                          {t('gigs.prenota')}
                         </Button>
                       )}
                     </div>
@@ -244,11 +207,27 @@ export function GigsEvents() {
                         alt={`${gig.venue} - ${gig.city}`}
                         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                      <div className="absolute top-4 left-4 bg-orange-600 text-white px-4 py-2 rounded font-bold">
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent z-0" />
+
+                      {/* If a hover image is provided, darken the card and show the preview on hover */}
+                      {gig.hoverImage ? (
+                        <>
+                          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-80 transition-opacity duration-300 pointer-events-none z-20" />
+
+                          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-30 px-4">
+                            <img
+                              src={gig.hoverImage}
+                              alt={`Preview - ${gig.venue}`}
+                              className="w-full max-h-[95%] object-contain rounded-md shadow-2xl"
+                            />
+                          </div>
+                        </>
+                      ) : null}
+
+                      <div className="absolute top-4 left-4 bg-orange-600 text-white px-4 py-2 rounded font-bold z-10">
                         {day} {month}
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
                         <h4 className="text-xl font-bold text-white mb-1">
                           {gig.venue}
                         </h4>
