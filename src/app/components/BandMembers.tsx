@@ -30,7 +30,7 @@ const members = [
   {
     name: 'Riccardo Pesserelli',
     instrument: 'band.keyboards',
-    image: 'https://images.unsplash.com/photo-1763598821439-2e80f7e23562?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxrZXlib2FyZCUyMHBsYXllciUyMG11c2ljaWFuJTIwbGl2ZXxlbnwxfHx8fDE3NzEwNzY2ODR8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: `${import.meta.env.BASE_URL}ric.jpg`,
     icon: Piano,
   },
 ];
