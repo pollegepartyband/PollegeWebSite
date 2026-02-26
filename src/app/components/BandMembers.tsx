@@ -24,7 +24,7 @@ const members = [
   {
     name: 'Nicolò Bosio',
     instrument: 'band.bass',
-    image: 'https://images.unsplash.com/photo-1528489496900-d841974f5290?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxiYXNzJTIwZ3VpdGFyaXN0JTIwcm9jayUyMG11c2ljaWFufGVufDF8fHx8MTc3MTA3NjY4NHww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: `${import.meta.env.BASE_URL}nico.png`,
     icon: Music4,
   },
   {
